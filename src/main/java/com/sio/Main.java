@@ -22,12 +22,18 @@ public class Main {
                     System.out.println("Quelle est la valeur du côté ?");
                     double cote = scanner.nextDouble();
                     double aire = cote * cote;
-                    System.out.println("L'aire du carré est de : " + aire);
+                    System.out.println("L'aire du carré est de : " + aire ,"cm²");
                     break;
 
                 case 2:
                     System.out.println("Entrer le nombre limite : ");
-                    int n = scanner.nextInt();
+                    int limit = scanner.nextInt();
+                    int sum = 0;
+                            for (int i = 0; i < limit; i++) {
+                                sum = sum + i;
+                            }
+                    System.out.print("La somme des ", limit, " premiers nombres est " + sum);
+                    }
                     break;
 
                 case 3:
