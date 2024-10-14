@@ -1,5 +1,6 @@
 package com.sio;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Main {
@@ -22,7 +23,7 @@ public class Main {
                     System.out.println("Quelle est la valeur du côté ?");
                     double cote = scanner.nextDouble();
                     double aire = cote * cote;
-                    System.out.println("L'aire du carré est de : " + aire ,"cm²");
+                    System.out.println("L'aire du carré est de : " + aire +"cm²");
                     break;
 
                 case 2:
@@ -32,16 +33,29 @@ public class Main {
                             for (int i = 0; i < limit; i++) {
                                 sum = sum + i;
                             }
-                    System.out.print("La somme des ", limit, " premiers nombres est " + sum);
-                    }
+                    System.out.print("La somme des "+ limit + " premiers nombres est " + sum);
+
                     break;
 
                 case 3:
-                    System.out.println("Exercice 3");
+                    System.out.println("Quel est votre indice ? ");
+                    int indice = scanner.nextInt();
+                    double brut = indice * 2.3;
+                    double retenues = brut * 0.2;
+                    double net = brut - retenues;
+                    System.out.println("Salaire brut : " + brut + "€");
+                    System.out.println("Montant des retenues : " + retenues + "€");
+                    System.out.println("Salaire net " + net + "€");
+
                     break;
 
                 case 4:
-                    System.out.println("Exercice 4");
+                    DecimalFormat df = new DecimalFormat("00.000");
+                    System.out.println("Quelle est la valeur de rayon ?");
+                    double rayon = scanner.nextDouble();
+                    float pi = 3.141592f;
+                    double perimetre = 2 * pi * rayon;
+                    System.out.println("Le périmetre du cercle est" + df.format(perimetre) + "cm");
                     break;
 
                 case 0:
